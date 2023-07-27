@@ -1,8 +1,23 @@
  function acessData() {
-        city = document.querySelector('.inputText').value
+    const inputElement = document.querySelector('.inputText');
+    let city = inputElement.value.trim();
+    if (city === "") {
+        document.querySelector('.error').innerHTML="City name is empty."
+        setTimeout(()=>{
+            document.querySelector('.error').innerHTML=""
+        },3000)
+        
+      return;
+    }
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric`)
             .then(data => data.json())
             .then(i => display(i))
+            .catch(error => {
+                document.querySelector('.error').innerHTML="Invalid city name !!!"
+        setTimeout(()=>{
+            document.querySelector('.error').innerHTML=""
+        },3000)
+              });
             
     }
 

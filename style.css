@@ -6,6 +6,13 @@
 }
 body{
     background: #222;
+    background-image: url(/images/wp12468203-cloudy-beach-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.main{
+    margin: 1rem;
 }
 .card{
     width: 90%;
@@ -16,6 +23,7 @@ body{
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    opacity: 80%;
 }
 .search{
     width: 100%;
@@ -47,6 +55,23 @@ body{
 }
 .search button img{
     width: 1.5rem;
+}
+.search button img:hover{
+width: 2rem;
+}
+h1{
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+.error{
+    text-align: left;
+    margin-top: .4rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: red;
 }
 /* //// */
 .w-icon{
